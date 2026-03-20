@@ -1,2 +1,3 @@
 # practica_1
-Justina Massa
+Nombre: Justina Massa
+Legajo: 018670/5
