@@ -14,6 +14,7 @@ words = [
 word = random.choice(words)
 guessed = []
 attempts = 6
+puntuacion = 0
 
 print("¡Bienvenido al Ahorcado!")
 print()
@@ -29,6 +30,8 @@ while attempts > 0:
 
     if "_" not in progress:
         print("¡Ganaste!")
+        puntuacion += 6
+        print(f"Tu puntuacion: {puntuacion}")
         break
 
     print(f"Intentos restantes: {attempts}")
@@ -45,7 +48,10 @@ while attempts > 0:
     else:
         guessed.append(letter)
         attempts -= 1
+        puntuacion -= 1
         print("Esa letra no está en la palabra.")
     print()
 else:
+    puntuacion = 0
     print(f"¡Perdiste! La palabra era: {word}")
+    print (f"Tu puntuacion: {puntuacion}")
